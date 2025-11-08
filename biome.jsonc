@@ -1,0 +1,54 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.4/schema.json",
+  // VCS integration - Use .gitignore
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  // File patterns
+  "files": {
+    "includes": ["**", "!!**/dist"]
+  },
+  // Code formatter settings
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space", // Use spaces instead of tabs
+    "indentWidth": 2, // 2 spaces per indent level
+    "lineWidth": 100 // Max line length
+  },
+  // Linter settings
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true // Use recommended rules
+    }
+  },
+  // JavaScript/TypeScript specific settings
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double", // Use double quotes
+      "semicolons": "always", // Always add semicolons
+      "trailingCommas": "es5", // Trailing commas where valid in ES5
+      "arrowParentheses": "always" // Always wrap arrow function params
+    }
+  },
+  // Code assist features
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on" // Auto-organize imports
+      }
+    }
+  },
+  // Override rules for specific files
+  "overrides": [
+    {
+      "includes": ["**/*.d.ts"],
+      "linter": {
+        "enabled": false // Disable linting for type definition files
+      }
+    }
+  ]
+}

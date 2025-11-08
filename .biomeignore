@@ -1,0 +1,13 @@
+# Auto-generated files
+worker-configuration.d.ts
+**/*.d.ts
+
+# Build output
+dist/
+.wrangler/
+
+# Dependencies
+node_modules/
+
+# Lock files
+pnpm-lock.yaml
